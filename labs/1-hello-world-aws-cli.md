@@ -16,7 +16,7 @@ If you would like to attempt the task, then skip the walk-through and go for the
 5. Launch instances
 6. Get public IP and test
 
-All commands has been designed for us-west-1. If you are using a different region, you need to modify accordingly. For example, your AMI ID will be different.
+All commands have been designed for us-west-1. If you are using a different region, you need to modify accordingly. For example, your AMI ID will be different.
 
 And yes, please do NOT use the AWS web console. You may logout from there now.
 
@@ -70,7 +70,7 @@ The next step will ensure you (and other people who want to see your page) can a
 
 Make sure there's no SSH access to the instance (the principle of lease needed privileges, see security pillar in AWS Well-Architectured Framework). Do not use AWS web console. Use only AWS CLI tool.
 
-Here some of the commands. Create a security group:
+Here are some of the commands. Create a security group:
 
 ```
 aws ec2 create-security-group --group-name \
@@ -112,7 +112,7 @@ For example, here's [a Marketplace search result for Amazon Linux AMIs](https://
 
 ## 5. Launch instances
 
-Navigate to the folder in which you have user data saved in file (e.g., httpd-hello-user-data.sh). Now you can launch an instance (or two) using user data and security group you created. The user data will be fed from a file using `file://` syntax. You can fetch user data from internet using http as well.
+Navigate to the folder in which you have user data saved in file (e.g., httpd-hello-user-data.sh). Now you can launch an instance (or two) using user data and the security group you created. The user data will be fed from a file using `file://` syntax. You can fetch user data from the internet using http as well.
 
 ```
 aws ec2 run-instances --image-id ami-7a85a01a \
